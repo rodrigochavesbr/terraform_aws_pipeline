@@ -1,0 +1,1 @@
+bucket_name = "dev-sa-west-1-buildrun-video-pipiline"
