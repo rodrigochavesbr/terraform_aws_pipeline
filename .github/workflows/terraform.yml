@@ -18,9 +18,6 @@ on:
       aws-lock-dynamodb-table:
         required: true
         type: string
-      bucket_name:
-        required: true
-        type: string
 
 jobs:
   code_quality:
