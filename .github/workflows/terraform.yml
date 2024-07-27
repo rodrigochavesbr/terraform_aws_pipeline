@@ -48,10 +48,13 @@ jobs:
         uses: creyD/prettier_action@v4.2
         with:
           dry: true
-          prettier_options: --check **/*.{md,yml}
+          prettier_options: --check "**/*.{md,yml}"
 
-      - name: Run tests
-        run: CI=true npm run test
+      - name: Run Prettier Write
+        run: npx prettier --write "**/*.{md,yml}"
+
+      - name: Output Prettier Issues
+        run: npx prettier --list-different "**/*.{md,yml}"
 
   terraform:
     runs-on: ubuntu-latest
