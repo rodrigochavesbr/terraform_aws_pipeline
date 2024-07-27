@@ -41,8 +41,14 @@ jobs:
       - name: Run ESLint
         run: npm run lint
 
-      - name: Run Prettier
-        run: npm run prettier
+      - name: Install npm v8
+        run: npm i -g npm@8
+
+      - name: Check code-style
+        uses: creyD/prettier_action@v4.2
+        with:
+          dry: true
+          prettier_options: --check **/*.{md,yml}
 
       - name: Run tests
         run: CI=true npm run test
