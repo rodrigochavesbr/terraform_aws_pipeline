@@ -48,7 +48,7 @@ jobs:
         uses: creyD/prettier_action@v4.2
         with:
           dry: true
-          prettier_options: --write **/*.{md,yml}
+          prettier_options: --list-different "**/*.{md,yml}"
 
       - name: Run tests
         run: CI=true npm run test
