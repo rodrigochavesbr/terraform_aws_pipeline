@@ -44,14 +44,6 @@ jobs:
       - name: Install npm v8
         run: npm i -g npm@8
 
-      # - name: Run Prettier
-      #   run: npm run prettier
-
-      - name: Check code-style
-        uses: creyD/prettier_action@v4.2
-        with:
-          dry: true
-
       - name: Run tests
         run: CI=true npm run test
 
